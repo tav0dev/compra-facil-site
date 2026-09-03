@@ -18,9 +18,9 @@ O projeto é estático e não exige variáveis de ambiente.
 
 ## Publicação
 
-Produção: <https://compra-facil-site.vercel.app>
+Produção: <https://comprafacilsarapui.vercel.app>
 
-Link para bio: <https://compra-facil-site.vercel.app/links>
+Link para bio: <https://comprafacilsarapui.vercel.app/links>
 
 ## Contato
 
