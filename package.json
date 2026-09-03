@@ -1,0 +1,13 @@
+{
+  "name": "compra-facil-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional e link na bio do Compra Fácil Delivery.",
+  "scripts": {
+    "dev": "serve .",
+    "check": "node scripts/check-site.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
