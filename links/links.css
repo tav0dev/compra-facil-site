@@ -149,8 +149,8 @@
 
 .profile-logo {
   position: relative;
-  width: 104px;
-  height: 104px;
+  width: 84px;
+  height: 84px;
   border: 4px solid rgba(255, 255, 255, 0.95);
   border-radius: 50%;
   background: #fff;
@@ -401,8 +401,8 @@
   }
 
   .profile-logo {
-    width: 90px;
-    height: 90px;
+    width: 76px;
+    height: 76px;
   }
 
   .verified-dot {

@@ -440,7 +440,8 @@ h3 {
 
 .hero-image-card > img {
   width: 100%;
-  min-height: 430px;
+  height: auto;
+  min-height: 0;
   border-radius: 28px;
   object-fit: cover;
 }
@@ -756,7 +757,9 @@ h3 {
 
 .phones {
   position: relative;
-  min-height: 680px;
+  width: min(100%, 430px);
+  min-height: 480px;
+  margin-inline: auto;
 }
 
 .phones::before {
@@ -773,10 +776,10 @@ h3 {
 
 .phone {
   position: absolute;
-  width: 280px;
-  padding: 8px;
+  width: 196px;
+  padding: 6px;
   border: 1px solid rgba(13, 51, 31, 0.13);
-  border-radius: 42px;
+  border-radius: 28px;
   background: #14231b;
   box-shadow: 0 32px 70px rgba(6, 52, 31, 0.2);
 }
@@ -784,10 +787,10 @@ h3 {
 .phone::before {
   position: absolute;
   z-index: 1;
-  top: 15px;
+  top: 10px;
   left: 50%;
-  width: 72px;
-  height: 19px;
+  width: 48px;
+  height: 12px;
   border-radius: 10px;
   background: #14231b;
   content: "";
@@ -796,9 +799,9 @@ h3 {
 
 .phone img {
   width: 100%;
-  height: 600px;
-  border-radius: 34px;
-  object-fit: cover;
+  height: auto;
+  border-radius: 22px;
+  object-fit: contain;
   object-position: top;
 }
 
@@ -811,7 +814,7 @@ h3 {
 
 .phone-back {
   z-index: 1;
-  top: 75px;
+  top: 36px;
   right: 1%;
   transform: rotate(7deg);
 }
@@ -905,7 +908,7 @@ h3 {
 .partner-card {
   position: relative;
   display: grid;
-  min-height: 550px;
+  min-height: 400px;
   overflow: hidden;
   border-radius: var(--radius-large);
   background: linear-gradient(125deg, var(--green-950), var(--green-800));
@@ -925,15 +928,15 @@ h3 {
 
 .partner-art {
   position: relative;
-  min-height: 400px;
+  min-height: 280px;
 }
 
 .partner-circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 360px;
-  height: 360px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   background: #fff;
   transform: translate(-50%, -50%);
@@ -943,7 +946,7 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 390px;
+  width: 260px;
   max-width: 88%;
   mix-blend-mode: multiply;
   transform: translate(-50%, -50%);
@@ -1212,16 +1215,12 @@ h3 {
   }
 
   .phone {
-    width: 250px;
-  }
-
-  .phone img {
-    height: 550px;
+    width: 180px;
   }
 
   .partner-circle {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
   }
 }
 
@@ -1335,7 +1334,8 @@ h3 {
   }
 
   .phones {
-    width: min(100%, 620px);
+    width: min(100%, 400px);
+    min-height: 450px;
     margin-inline: auto;
     order: 2;
   }
@@ -1349,7 +1349,7 @@ h3 {
   }
 
   .partner-art {
-    min-height: 340px;
+    min-height: 240px;
   }
 
   .partner-copy {
@@ -1401,7 +1401,7 @@ h3 {
   }
 
   .hero-image-card > img {
-    min-height: 240px;
+    min-height: 0;
     border-radius: 21px;
   }
 
@@ -1503,15 +1503,12 @@ h3 {
   }
 
   .phones {
-    min-height: 570px;
+    width: min(100%, 330px);
+    min-height: 380px;
   }
 
   .phone {
-    width: 220px;
-  }
-
-  .phone img {
-    height: 500px;
+    width: 150px;
   }
 
   .phone-front {
@@ -1519,7 +1516,7 @@ h3 {
   }
 
   .phone-back {
-    right: -4%;
+    right: 2%;
   }
 
   .phone-badge {
@@ -1528,12 +1525,16 @@ h3 {
   }
 
   .partner-art {
-    min-height: 285px;
+    min-height: 200px;
   }
 
   .partner-circle {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .partner-art img {
+    width: 200px;
   }
 
   .partner-copy {
@@ -1611,22 +1612,22 @@ h3 {
   }
 
   .phones {
-    min-height: 505px;
+    width: min(100%, 300px);
+    min-height: 350px;
   }
 
   .phone {
-    width: 185px;
-    border-radius: 30px;
+    width: 140px;
+    border-radius: 24px;
   }
 
   .phone::before {
-    width: 54px;
-    height: 15px;
+    width: 42px;
+    height: 10px;
   }
 
   .phone img {
-    height: 440px;
-    border-radius: 23px;
+    border-radius: 18px;
   }
 
   .phone-badge {
