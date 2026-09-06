@@ -1003,7 +1003,7 @@ h3 {
   display: none;
 }
 
-.accordion summary span {
+.accordion .faq-chevron {
   display: grid;
   width: 32px;
   height: 32px;
@@ -1012,12 +1012,28 @@ h3 {
   color: var(--green-800);
   border-radius: 50%;
   background: var(--soft-green);
-  font-size: 1.2rem;
+}
+
+.accordion .faq-chevron::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;
   transition: transform 0.2s ease;
 }
 
-.accordion details[open] summary span {
-  transform: rotate(45deg);
+.accordion details[open] .faq-chevron::before {
+  transform: rotate(225deg);
+  margin-top: 4px;
+}
+
+.accordion summary:focus-visible {
+  outline: 2px solid var(--green-700);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 .accordion details p {
