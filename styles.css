@@ -297,7 +297,7 @@ h3 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 156px 0 92px;
+  padding: 132px 0 64px;
 }
 
 .hero::before {
@@ -377,7 +377,7 @@ h3 {
 .hero h1 {
   max-width: 650px;
   margin-bottom: 24px;
-  font-size: clamp(3.1rem, 6.1vw, 5.8rem);
+  font-size: clamp(2.8rem, 4.4vw, 4.5rem);
 }
 
 .hero h1 span {
@@ -543,7 +543,7 @@ h3 {
 }
 
 .section {
-  padding: 110px 0;
+  padding: 72px 0;
 }
 
 .section-heading {
@@ -1168,8 +1168,8 @@ h3 {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1200,7 +1200,7 @@ h3 {
   }
 
   .hero h1 {
-    font-size: clamp(3.2rem, 7vw, 5rem);
+    font-size: clamp(2.8rem, 4.8vw, 4rem);
   }
 
   .floating-card-top {
@@ -1256,6 +1256,7 @@ h3 {
     border-radius: 22px;
     background: #fff;
     box-shadow: var(--shadow);
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-12px);
@@ -1263,6 +1264,7 @@ h3 {
   }
 
   .main-nav.open {
+    visibility: visible;
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
@@ -1377,11 +1379,11 @@ h3 {
   }
 
   .hero {
-    padding: 112px 0 66px;
+    padding: 100px 0 40px;
   }
 
   .hero h1 {
-    font-size: clamp(2.75rem, 13vw, 4.1rem);
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
   }
 
   .hero-lead {
@@ -1399,7 +1401,7 @@ h3 {
   }
 
   .hero-image-card > img {
-    min-height: 315px;
+    min-height: 240px;
     border-radius: 21px;
   }
 
@@ -1434,7 +1436,7 @@ h3 {
   }
 
   .section {
-    padding: 80px 0;
+    padding: 48px 0;
   }
 
   .section-heading p,
@@ -1450,6 +1452,33 @@ h3 {
 
   .step-card {
     padding: 26px;
+    min-height: 0;
+    display: grid;
+    column-gap: 18px;
+    grid-template-columns: 54px 1fr;
+  }
+
+  .step-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0;
+    border-radius: 16px;
+    grid-row: span 2;
+  }
+
+  .step-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .step-card h3,
+  .step-card p {
+    grid-column: 2;
+  }
+
+  .step-number {
+    top: 12px;
+    right: 14px;
   }
 
   .service-cards {
@@ -1457,12 +1486,20 @@ h3 {
   }
 
   .service-card-main {
-    min-height: 290px;
+    min-height: 0;
     grid-column: auto;
   }
 
   .service-card {
-    min-height: 260px;
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .service-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    float: right;
   }
 
   .phones {

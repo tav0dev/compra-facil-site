@@ -35,7 +35,10 @@ if (menuToggle && navigation) {
     if (window.innerWidth > 860) closeMenu();
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 }
 
