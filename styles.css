@@ -1130,9 +1130,7 @@ h3 {
   min-height: 44px;
 }
 
-.support-link img,
-.footer-contact img,
-.footer-contact svg {
+.support-link img {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -1161,10 +1159,28 @@ h3 {
   min-width: 0;
 }
 
-.footer-help-icon {
-  background: var(--soft-green);
-  border-radius: 6px;
-  padding: 2px;
+/* Equal 24px alignment slots; visible artwork is approximately 20px.
+   Official Meta PNGs fill their canvas; outlined SVGs have internal margins. */
+.footer-contact-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.footer-contact-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.footer-contact-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .footer-column a:hover {
