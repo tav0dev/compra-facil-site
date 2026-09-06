@@ -282,9 +282,14 @@
 }
 
 .bio-icon svg {
-  width: 23px;
-  height: 23px;
-  fill: currentColor;
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .icon-green {
