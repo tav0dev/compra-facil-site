@@ -252,11 +252,12 @@
   font-size: 0.76rem;
 }
 
-.bio-help img {
-  background: #e6f8d7;
-  border-radius: 50%;
-  padding: 3px;
-  flex-shrink: 0;
+.bio-help svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  color: #fff;
 }
 
 .bio-help:hover {

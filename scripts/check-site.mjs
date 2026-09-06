@@ -24,7 +24,7 @@ for (const htmlFile of htmlFiles) {
   const html = readFileSync(absoluteFile, "utf8");
 
   if (htmlFile !== "404.html") {
-    for (const contact of ["https://www.instagram.com/comprafacilsarapui\"", "mailto:contato.comprafacilsarapui@gmail.com", "https://wa.me/5515997642509", "/assets/support-agent.svg"]) {
+    for (const contact of ["https://www.instagram.com/comprafacilsarapui\"", "mailto:contato.comprafacilsarapui@gmail.com", "https://wa.me/5515997642509"]) {
       if (!html.includes(contact)) errors.push(`${htmlFile}: contato ou ícone ausente: ${contact}`);
     }
     if (html.includes("comprafacilsarapui.015")) errors.push(`${htmlFile}: Instagram antigo.`);
