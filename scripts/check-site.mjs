@@ -30,6 +30,14 @@ for (const htmlFile of htmlFiles) {
     if (html.includes("comprafacilsarapui.015")) errors.push(`${htmlFile}: Instagram antigo.`);
     if (!html.includes("https://wa.me/5511949896488")) errors.push(`${htmlFile}: contato de pedidos removido.`);
   }
+  if (htmlFile === 'index.html') {
+    const contacts = [...html.matchAll(/<a class="footer-contact"[^>]*>([\s\S]*?)<\/a>/g)];
+    if (contacts.length !== 4 || contacts.some(([, content]) => !/<(?:img|svg)\b/.test(content) || !/<span>[^<]+<\/span>/.test(content))) {
+      errors.push('Rodapé: os quatro contatos precisam de ícone e texto visível.');
+    }
+    if (!html.includes('class="faq-help support-link"')) errors.push('FAQ: link de ajuda ausente.');
+    if (html.includes('class="floating-support"')) errors.push('O suporte flutuante pertence ao app, não ao site.');
+  }
 
   if (/^\s*\+\s*(?:<|class=|href=)/m.test(html)) {
     errors.push(`${htmlFile}: contém marcador de patch inesperado.`);

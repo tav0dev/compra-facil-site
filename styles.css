@@ -256,7 +256,8 @@ h3 {
 .main-nav a:focus-visible,
 .text-link:focus-visible,
 .store-button:focus-visible,
-.support-link:focus-visible {
+.support-link:focus-visible,
+.footer-contact:focus-visible {
   outline: 3px solid rgba(105, 204, 47, 0.5);
   outline-offset: 3px;
 }
@@ -1129,10 +1130,41 @@ h3 {
   min-height: 44px;
 }
 
-.support-link img {
-  background: #fff;
-  border-radius: 8px;
-  padding: 3px;
+.support-link img,
+.footer-contact img,
+.footer-contact svg {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
+.faq-help {
+  margin-top: 20px;
+  color: var(--green-800);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.faq-help:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+
+.footer-contact span {
+  min-width: 0;
+}
+
+.footer-help-icon {
+  background: var(--soft-green);
+  border-radius: 6px;
+  padding: 2px;
 }
 
 .footer-column a:hover {
