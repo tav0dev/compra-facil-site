@@ -49,6 +49,20 @@ for (const htmlFile of htmlFiles) {
   }
 }
 
+// Supplied app captures keep their native dimensions; no stretched test renders.
+for (const name of ["home", "categories", "more-categories", "food-categories", "benefits", "rides"]) {
+  const path = join(root, `assets/app-${name}.png`);
+  if (!existsSync(path)) {
+    errors.push(`Print ausente: ${name}.`);
+    continue;
+  }
+  const png = readFileSync(path);
+  if (png.length < 24 || png.subarray(0, 8).toString("hex") !== "89504e470d0a1a0a"
+      || png.readUInt32BE(16) !== 945 || png.readUInt32BE(20) !== 1888) {
+    errors.push(`Print ${name}: esperado PNG original 945 × 1888.`);
+  }
+}
+
 for (const jsonFile of ["package.json", "vercel.json"]) {
   try {
     JSON.parse(readFileSync(join(root, jsonFile), "utf8"));
