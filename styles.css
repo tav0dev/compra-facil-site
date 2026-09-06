@@ -866,39 +866,26 @@ h3 {
 
 .store-button {
   display: inline-flex;
+  width: fit-content;
   align-items: center;
-  gap: 12px;
-  padding: 11px 18px;
-  color: #fff;
-  border-radius: 14px;
-  background: #13231a;
-  box-shadow: var(--shadow-small);
-  transition: transform 0.2s ease;
+  justify-content: center;
+  padding: 14px;
+  border-radius: 4px;
 }
 
-.store-button:hover {
-  transform: translateY(-2px);
+.store-button img {
+  display: block;
+  width: 180px;
+  height: auto;
 }
 
-.store-button svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
+.store-button:focus-visible {
+  outline: 3px solid var(--green-700);
+  outline-offset: 2px;
 }
 
-.store-button span {
-  display: grid;
-  line-height: 1.05;
-}
-
-.store-button small {
-  font-size: 0.65rem;
-}
-
-.store-button strong {
-  margin-top: 4px;
-  font-family: "Manrope", sans-serif;
-  font-size: 1.04rem;
+.hero-actions .store-button {
+  justify-self: center;
 }
 
 .partner-section {
@@ -1164,10 +1151,10 @@ h3 {
   transform: translateY(-3px) scale(1.02);
 }
 
-.floating-whatsapp svg {
+.floating-whatsapp img {
   width: 30px;
   height: 30px;
-  fill: currentColor;
+  object-fit: contain;
 }
 
 .reveal {

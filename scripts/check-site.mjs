@@ -36,6 +36,14 @@ for (const htmlFile of htmlFiles) {
   }
 
   const ids = new Set([...html.matchAll(/\sid=["']([^"']+)["']/g)].map((match) => match[1]));
+  for (const anchor of html.matchAll(/<a\b[^>]*href="https:\/\/(?:play\.google\.com|wa\.me|www\.instagram\.com)[^>]*>[\s\S]*?<\/a>/g)) {
+    if (anchor[0].includes('<svg') && /play\.google\.com|floating-whatsapp|icon-whatsapp|icon-instagram/.test(anchor[0])) {
+      errors.push(`${htmlFile}: marca externa redesenhada em SVG inline.`);
+    }
+    if (anchor[0].includes('play.google.com') && !anchor[0].includes('/assets/brands/google-play-badge-pt-br.png')) {
+      errors.push(`${htmlFile}: download sem o selo oficial do Google Play.`);
+    }
+  }
   for (const anchor of references.filter((reference) => reference.startsWith("#"))) {
     if (!ids.has(anchor.slice(1))) errors.push(`${htmlFile}: âncora inexistente: ${anchor}`);
   }

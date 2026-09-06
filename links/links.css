@@ -226,14 +226,22 @@
   transform: translateY(-2px);
 }
 
-.bio-link-featured {
-  color: #fff;
-  border-color: rgba(129, 233, 73, 0.3);
-  background: linear-gradient(110deg, #148b4c, #08713e);
+.bio-link.bio-link-featured {
+  justify-content: center;
+  padding: 14px;
+  background: #fff;
 }
 
-.bio-link-featured:hover {
-  background: linear-gradient(110deg, #179c56, #087943);
+.bio-play-badge {
+  width: 180px;
+  height: auto;
+}
+
+.bio-icon img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .bio-icon {
