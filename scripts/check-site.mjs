@@ -48,9 +48,12 @@ for (const htmlFile of htmlFiles) {
     if (anchor[0].includes('<svg') && /play\.google\.com|floating-whatsapp|icon-whatsapp|icon-instagram/.test(anchor[0])) {
       errors.push(`${htmlFile}: marca externa redesenhada em SVG inline.`);
     }
-    if (anchor[0].includes('play.google.com') && !anchor[0].includes('/assets/brands/google-play-badge-pt-br.png')) {
+    if (htmlFile !== 'links/index.html' && anchor[0].includes('play.google.com') && !anchor[0].includes('/assets/brands/google-play-badge-pt-br.png')) {
       errors.push(`${htmlFile}: download sem o selo oficial do Google Play.`);
     }
+  }
+  if (htmlFile === 'links/index.html' && (!html.includes('Baixar aplicativo') || !html.includes('Para Android · Google Play'))) {
+    errors.push('Bio: download precisa de rótulo claro e plataforma.');
   }
   for (const anchor of references.filter((reference) => reference.startsWith("#"))) {
     if (!ids.has(anchor.slice(1))) errors.push(`${htmlFile}: âncora inexistente: ${anchor}`);
