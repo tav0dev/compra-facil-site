@@ -256,7 +256,7 @@ h3 {
 .main-nav a:focus-visible,
 .text-link:focus-visible,
 .store-button:focus-visible,
-.floating-whatsapp:focus-visible {
+.floating-support:focus-visible {
   outline: 3px solid rgba(105, 204, 47, 0.5);
   outline-offset: 3px;
 }
@@ -1106,6 +1106,19 @@ h3 {
   font-size: 0.9rem;
 }
 
+.support-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.support-link img {
+  background: #fff;
+  border-radius: 8px;
+  padding: 3px;
+}
+
 .footer-column a:hover {
   color: #fff;
 }
@@ -1130,11 +1143,11 @@ h3 {
   color: #fff;
 }
 
-.floating-whatsapp {
+.floating-support {
   position: fixed;
   z-index: 900;
   right: 22px;
-  bottom: 22px;
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px));
   display: grid;
   width: 58px;
   height: 58px;
@@ -1142,16 +1155,16 @@ h3 {
   color: #fff;
   border: 3px solid #fff;
   border-radius: 50%;
-  background: #18a957;
+  background: #fff;
   box-shadow: 0 13px 30px rgba(4, 65, 32, 0.28);
   transition: transform 0.2s ease;
 }
 
-.floating-whatsapp:hover {
+.floating-support:hover {
   transform: translateY(-3px) scale(1.02);
 }
 
-.floating-whatsapp img {
+.floating-support img {
   width: 30px;
   height: 30px;
   object-fit: contain;
@@ -1559,9 +1572,9 @@ h3 {
     flex-direction: column;
   }
 
-  .floating-whatsapp {
+  .floating-support {
     right: 14px;
-    bottom: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
     width: 54px;
     height: 54px;
   }

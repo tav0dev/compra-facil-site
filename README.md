@@ -35,6 +35,7 @@ Link para bio: <https://comprafacilsarapui.vercel.app/links>
 
 ## Contato
 
-- Instagram: [@comprafacilsarapui.015](https://www.instagram.com/comprafacilsarapui.015)
+- Instagram: [@comprafacilsarapui](https://www.instagram.com/comprafacilsarapui)
 - E-mail: contato.comprafacilsarapui@gmail.com
 - WhatsApp: +55 11 94989-6488
+- Suporte pelo WhatsApp: +55 15 99764-2509 (botão com atendente de headset).

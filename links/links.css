@@ -352,7 +352,16 @@
   color: #fff;
 }
 
+.links-footer .contact-email {
+  flex-basis: 100%;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  overflow-wrap: anywhere;
+}
+
 .links-footer {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
